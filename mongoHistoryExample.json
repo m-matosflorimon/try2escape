@@ -1,0 +1,10 @@
+//History
+[
+    {
+        "_id" : ObjectId("5bb975544f3a67a391dc6df4"),
+        "client" : ObjectId("5bb973f44f3a67a391dc6df1"),
+        "reservations" : [
+            ObjectId("5bb9749b4f3a67a391dc6df3")
+        ]
+    }
+]

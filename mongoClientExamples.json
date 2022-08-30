@@ -1,0 +1,17 @@
+//Clients
+[
+    {
+        "_id" : ObjectId("5bb973f44f3a67a391dc6df1"),
+        "name" : "Miguel Matos",
+        "phone" : "829-829-8298",
+        "email" : "m.matosflorimon@gmail.com",
+        "history" : null
+    },
+    {
+        "_id" : ObjectId("5bc76ab80cf7c2a23e77e687"),
+        "name" : "Eduardo Florimon",
+        "phone" : "829-829-8298",
+        "email" : "mem701@gmail.com",
+        "history" : null
+    }
+]

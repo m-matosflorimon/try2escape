@@ -1,0 +1,69 @@
+use Try2Escape
+db.availability.insertMany([
+    {
+        "_id" : ObjectId("5bb97aee4f3a67a391dc6df7"),
+        "date" : ISODate("2022-09-30T04:00:00Z"),
+        "time" : [
+            {
+                "time" : "1:00pm",
+                "available" : 1
+            },
+            {
+                "time" : "2:00pm",
+                "available" : 0
+            },
+            {
+                "time" : "5:00pm",
+                "available" : 2
+            }
+        ],
+        "missions" : [
+            {
+                "name" : ObjectId("5bb8263bb986178fa241c096"),
+                "time" : [
+                    "1:00pm",
+                    "5:00pm"
+                ]
+            },
+            {
+                "name" : ObjectId("5bb978e64f3a67a391dc6df6"),
+                "time" : [
+                    "2:00pm"
+                ]
+            }
+        ]
+    },
+    {
+        
+        "date" : ISODate("2022-10-30T04:00:00Z"),
+        "time" : [
+            {
+                "time" : "1:00pm",
+                "available" : 1
+            },
+            {
+                "time" : "2:00pm",
+                "available" : 1
+            },
+            {
+                "time" : "5:00pm",
+                "available" : 2
+            }
+        ],
+        "missions" : [
+            {
+                "name" : ObjectId("5bb8263bb986178fa241c096"),
+                "time" : [
+                    "1:00pm",
+                    "5:00pm"
+                ]
+            },
+            {
+                "name" : ObjectId("5bb978e64f3a67a391dc6df6"),
+                "time" : [
+                    "2:00pm"
+                ]
+            }
+        ]
+    }
+])

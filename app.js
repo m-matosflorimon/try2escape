@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var expressValidator = require('express-validator');
 var mongojs = require('mongojs');
-var db = mongojs('Try2Escape', ['clients','missions', 'reservations','history','availability']);
+var db = mongojs('mongodb://127.0.0.1/Try2Escape', ['clients','missions', 'reservations','history','availability']);
 var mailer = require('express-mailer');
 
 var app = express();

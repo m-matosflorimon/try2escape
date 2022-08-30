@@ -1,0 +1,17 @@
+//Missions
+[
+    {
+        "_id" : ObjectId("5bb8263bb986178fa241c096"),
+        "name" : "Mision 1",
+        "description" : "Preparate para la aventura",
+        "creationDate" : ISODate("2018-11-06T04:00:00Z"),
+        "people" : 13
+    },
+    {
+        "_id" : ObjectId("5bb978e64f3a67a391dc6df6"),
+        "name" : "Mision 2",
+        "description" : "60 mins de pura diversion",
+        "creationDate" : ISODate("2018-11-07T04:00:00Z"),
+        "people" : 13
+    }
+]

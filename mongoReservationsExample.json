@@ -1,0 +1,33 @@
+//Reservations
+[
+    {
+        "_id" : ObjectId("5bc606d3ab6a6fae8dddbe33"),
+        "date" : ISODate("2018-10-30T04:00:00Z"),
+        "time" : "1:00pm",
+        "dateSubmitted" : ISODate("2018-10-07T02:51:07.173Z"),
+        "client" : ObjectId("5bb973f44f3a67a391dc6df1"),
+        "mission" : ObjectId("5bb8263bb986178fa241c096"),
+        "people" : 13,
+        "status" : "reserved"
+    },
+    {
+        "_id" : ObjectId("5bc62baeab6a6fae8dddbe35"),
+        "date" : ISODate("2018-11-30T04:00:00Z"),
+        "time" : "5:00pm",
+        "dateSubmitted" : ISODate("2018-10-07T02:51:07.173Z"),
+        "client" : ObjectId("5bb973f44f3a67a391dc6df1"),
+        "mission" : ObjectId("5bb8263bb986178fa241c096"),
+        "people" : 13,
+        "status" : "reserved"
+    },
+    {
+        "_id" : ObjectId("5bc62baeab6a6fae8dddbe35"),
+        "date" : ISODate("2018-11-30T04:00:00Z"),
+        "time" : "1:00pm",
+        "dateSubmitted" : ISODate("2018-10-07T02:51:07.173Z"),
+        "client" : ObjectId("5bc76ab80cf7c2a23e77e687"),
+        "mission" : ObjectId("5bb8263bb986178fa241c096"),
+        "people" : 13,
+        "status" : "reserved"
+    }
+]
