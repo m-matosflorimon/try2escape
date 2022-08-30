@@ -1,0 +1,90 @@
+[{
+	date: "2018-10-30", 
+	mission: [
+		{
+		missionId: ObjectId("5bad8d48591f2afd073452b3"),
+		time: [
+			{
+			hour: "1:00pm",
+			status: "Disponible",
+			availability: 2,
+			people: 13,
+			subscribed: [
+				{
+				client: ObjectId("5bad8d48591f2afd073452b3"),
+				timeRegistered: new Date(2018,09,27)
+				}			
+			]
+			},
+			{
+			hour: "2:00pm",
+			status: "Disponible",
+			availability: 2,
+			people: 13,
+			subscribed: [
+				{
+				client: ObjectId("5bad8d48591f2afd073452b3"),
+				timeRegistered: new Date(2018,09,27)
+				}			
+			]
+			},
+			{
+			hour: "3:00pm",
+			status: "Disponible",
+			availability: 0,
+			people: 13,
+			subscribed: [
+				{
+				client: ObjectId("5bad8d48591f2afd073452b3"),
+				timeRegistered: new Date(2018,09,27)
+				}			
+			]
+			}
+		]	
+	]		
+},
+{
+	date: "2018-10-20", 
+	mission: [
+		{
+		missionId: ObjectId("5bad8d48591f2afd073452b3"),
+		time: [
+			{
+			hour: "1:00pm",
+			status: "Disponible",
+			availability: 2,
+			people: 13,
+			subscribed: [
+				{
+				client: ObjectId("5bad8d48591f2afd073452b3"),
+				timeRegistered: new Date(2018,09,27)
+				}			
+			]
+			},
+			{
+			hour: "2:00pm",
+			status: "Reservado",
+			availability: 2,
+			people: 13,
+			subscribed: [
+				{
+				client: ObjectId("5bad8d48591f2afd073452b3"),
+				timeRegistered: new Date(2018,09,27)
+				}			
+			]
+			},
+			{
+			hour: "3:00pm",
+			status: "Disponible",
+			availability: 0,
+			people: 13,
+			subscribed: [
+				{
+				client: ObjectId("5bad8d48591f2afd073452b3"),
+				timeRegistered: new Date(2018,09,27)
+				}			
+			]
+			}
+		]	
+	]		
+}]

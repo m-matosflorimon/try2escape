@@ -1,0 +1,250 @@
+//Missions
+[
+    {
+        "_id" : ObjectId("5bb8263bb986178fa241c096"),
+        "name" : "Mision 1",
+        "description" : "Preparate para la aventura",
+        "creationDate" : ISODate("2018-11-06T04:00:00Z"),
+        "people" : 13
+    },
+    {
+        "_id" : ObjectId("5bb978e64f3a67a391dc6df6"),
+        "name" : "Mision 2",
+        "description" : "60 mins de pura diversion",
+        "creationDate" : ISODate("2018-11-07T04:00:00Z"),
+        "people" : 13
+    }
+]
+
+//Reservations
+[
+    {
+        "_id" : ObjectId("5bc606d3ab6a6fae8dddbe33"),
+        "date" : ISODate("2018-10-30T04:00:00Z"),
+        "time" : "1:00pm",
+        "dateSubmitted" : ISODate("2018-10-07T02:51:07.173Z"),
+        "client" : ObjectId("5bb973f44f3a67a391dc6df1"),
+        "mission" : ObjectId("5bb8263bb986178fa241c096"),
+        "people" : 13,
+        "status" : "reserved"
+    },
+    {
+        "_id" : ObjectId("5bc62baeab6a6fae8dddbe35"),
+        "date" : ISODate("2018-11-30T04:00:00Z"),
+        "time" : "5:00pm",
+        "dateSubmitted" : ISODate("2018-10-07T02:51:07.173Z"),
+        "client" : ObjectId("5bb973f44f3a67a391dc6df1"),
+        "mission" : ObjectId("5bb8263bb986178fa241c096"),
+        "people" : 13,
+        "status" : "reserved"
+    },
+    {
+        "_id" : ObjectId("5bc62baeab6a6fae8dddbe35"),
+        "date" : ISODate("2018-11-30T04:00:00Z"),
+        "time" : "1:00pm",
+        "dateSubmitted" : ISODate("2018-10-07T02:51:07.173Z"),
+        "client" : ObjectId("5bc76ab80cf7c2a23e77e687"),
+        "mission" : ObjectId("5bb8263bb986178fa241c096"),
+        "people" : 13,
+        "status" : "reserved"
+    }
+]
+
+
+
+//Clients
+[
+    {
+        "_id" : ObjectId("5bb973f44f3a67a391dc6df1"),
+        "name" : "Miguel Matos",
+        "phone" : "829-829-8298",
+        "email" : "m.matosflorimon@gmail.com",
+        "history" : null
+    },
+    {
+        "_id" : ObjectId("5bc76ab80cf7c2a23e77e687"),
+        "name" : "Eduardo Florimon",
+        "phone" : "829-829-8298",
+        "email" : "mem701@gmail.com",
+        "history" : null
+    }
+]
+
+//History
+[
+    {
+        "_id" : ObjectId("5bb975544f3a67a391dc6df4"),
+        "client" : ObjectId("5bb973f44f3a67a391dc6df1"),
+        "reservations" : [
+            ObjectId("5bb9749b4f3a67a391dc6df3")
+        ]
+    }
+]
+
+//availability
+[
+    {
+        "_id" : ObjectId("5bb97aee4f3a67a391dc6df7"),
+        "date" : ISODate("2018-11-30T04:00:00Z"),
+        "time" : [
+            {
+                "time" : "1:00pm",
+                "available" : 1
+            },
+            {
+                "time" : "2:00pm",
+                "available" : 0
+            },
+            {
+                "time" : "5:00pm",
+                "available" : 2
+            }
+        ],
+        "missions" : [
+            {
+                "name" : ObjectId("5bb8263bb986178fa241c096"),
+                "time" : [
+                    "1:00pm",
+                    "5:00pm"
+                ]
+            },
+            {
+                "name" : ObjectId("5bb978e64f3a67a391dc6df6"),
+                "time" : [
+                    "2:00pm"
+                ]
+            }
+        ]
+    },
+    {
+        
+        "date" : ISODate("2019-01-30T04:00:00Z"),
+        "time" : [
+            {
+                "time" : "1:00pm",
+                "available" : 1
+            },
+            {
+                "time" : "2:00pm",
+                "available" : 1
+            },
+            {
+                "time" : "5:00pm",
+                "available" : 2
+            }
+        ],
+        "missions" : [
+            {
+                "name" : ObjectId("5bb8263bb986178fa241c096"),
+                "time" : [
+                    "1:00pm",
+                    "5:00pm"
+                ]
+            },
+            {
+                "name" : ObjectId("5bb978e64f3a67a391dc6df6"),
+                "time" : [
+                    "2:00pm"
+                ]
+            }
+        ]
+    }
+]
+
+//form response json format
+[
+    {
+        "name": "mision 1",
+        "times": ["1:00pm","5:00pm"],
+        "people": 13
+    }
+]
+
+
+
+///////////////////////////////////////////////////
+//junk
+
+
+   // console.log(date);
+    //console.log(new Date('"' + req.query.date + '"'));
+    //console.log(new Date(date[2], date[1], date[0]));
+    /*db.availability.findOne({"date": new Date(date[2], date[1], date[0])}, function (err, docs) {
+        //console.log(err);
+        //console.log(docs);
+        var prove = db.missions.findOne({"_id": mongojs.ObjectId(docs.missions[0].name)}, function(err,doc){
+            /*console.log(doc[0].name);
+            return doc[0].name;*/
+        /*});*/
+        //console.log(prove);
+        /*// docs is now a sorted array
+        console.log(err);
+        //console.log(docs);
+        
+        var response = [];
+        var miss = 0;
+        var hour = 0;
+        
+
+        for(miss = 0; miss < docs.mission.length ; miss++){
+            var missionsName;
+            var missionsPeople;
+            var hours = [];
+            for(hour = 0; hour < docs.mission[miss].time.length ; hour++){
+                if(docs.mission[miss].time[hour].status === true){
+                    hours.push(docs.mission[miss].time[hour].hour);
+                }
+            }
+            
+
+
+            db.missions.findOne({
+                _id: docs.mission[miss].missionId
+            }, function(err, doc) {
+                // doc._id.toString() === '523209c4561c640000000001'
+                
+                missionsName = doc.name;
+                missionsPeople = doc.people;
+
+                
+                
+            })
+            
+            console.log(missionsName);
+            console.log(hours);
+        }
+
+            /*db.missions.find({"_id": docs.mission[miss].missionId})
+
+            db.missions.findOne({
+                _id: mongojs.docs.mission[miss].missionId
+            }, function(err, doc) {
+                // doc._id.toString() === '523209c4561c640000000001'
+                missionsName = doc.name;
+                missionsPeople = doc.people;
+            })
+
+            var responseItem = {
+                missionName : missionsName,
+                times : hours,
+                missionPeople : missionsPeople
+            }
+            response.push(responseItem);
+
+        }
+
+        /*for(i=0 ; i< docs.length ; i++){
+            
+            if(docs[i].date === req.query.date){
+                
+                docs[i]._id += ''; 
+                response.push(docs[i]);
+                console.log(response);
+                res.json(response);
+            }
+            
+        }*//*
+    console.log(response);
+    res.json(response);*/
+    /*});*/
+

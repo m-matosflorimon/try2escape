@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    
+    <!-- Style   -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand|Sedgwick+Ave">
+    <link rel="stylesheet" href="/css/under-construction.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    </head>
+
+    <body>
+        <!-- Container -->
+        <!-- ========================================================================================= -->
+        <div class="box">
+
+            <!-- Pieces and puzzle space -->
+            <!-- ========================================================================================= -->
+            <div id= "toDropTL" class= "dropBox"></div>
+            <div id= "toDropTR" class= "dropBox"></div>
+            <div id= "toDropBL" class= "dropBox"></div>
+            <div id= "toDropBR" class= "dropBox"></div>
+
+            <div id= "topLeft" class="piece topLeft" draggable="false"></div>
+            <div id= "topRight" class="piece topRight" draggable="false"></div>
+            <div id= "botLeft" class="piece botLeft" draggable="false"></div>
+            <div id= "botRight" class="piece botRight" draggable="false"></div>
+
+            
+
+            <div id= "toDrop" class="dropBoxContainer"></div>
+            
+            
+
+            <div id= "toDropText" class= "dropBoxText">Ármame</div> 
+            <!-- <div class="arrange">¡Ármame!</div> -->
+            
+            <!-- Titles and Form -->
+            <!-- ========================================================================================= -->
+            <div id="begin" class="title-01 title-01--11 text-center title-own">
+                
+                <h2 class="title__heading title-own-text">
+                    <span>Somos</span>
+                    <br>
+                    <strong class="hero-section__words title-own-text">
+                        <span class="title__effect is-visible">Try<span class="two">2</span>Escape</span>
+                    </strong>
+                </h2>
+
+                <!-- Form -->
+                <div id="email-input-area" class="email-input-area">
+                    <form id="pre-form" class="form" method="POST" action="">
+                        <input id="email-input" type="text" name="email" data-rule="required" class="email-input" placeholder="Introduce tu email" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('submit-btn').click()" >
+                        <input id="submit-btn" value="¡Dale!" class= "submit-btn">
+                        <!-- <button class="submit-btn">¡Dale!</button> -->
+                    </form>
+                </div>
+
+                <br>
+
+                <!-- Explain -->
+                <div class="text-faded title-own-text">Estamos en construcción. <br> Déjanos tu email y te mantendremos al tanto.</div>                    
+                
+                <br>
+
+                <!-- Construction animation -->
+                <div class="socializa gears">
+                    <a href="https://www.facebook.com/Try-2-Escape-RD-213241109382686/" target="_blank" class="socialLeft"><i class="fab fa-facebook-f"></i></a>
+                    <img src="https://goo.gl/fpC7Oh" alt="gear" class="big">    
+                    <img src="https://goo.gl/qL1pnV" alt="gear" class="small">
+                    <a href="https://www.instagram.com/try2escaperd/" target="_blank" class="socialRight"><i class="fab fa-instagram"></i></a>
+                </div>
+
+            </div> 
+
+        </div>
+
+    </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/under-construction.js"></script>
+<script src="/js/own.js"></script>
+</html>

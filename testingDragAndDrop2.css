@@ -1,0 +1,84 @@
+       :root{
+        --size: 45px;
+       }
+       
+
+        .top,
+        .bottom,
+        .left,
+        .right {
+        background: #ff0000;
+        display: inline-block;
+        margin: 0 1em 1em 0;
+        }
+
+
+        .top,
+        .bottom {
+        height: var(--size);
+        width: var(--size) * 2;
+        }
+
+        .right,
+        .left {
+        height: var(--size) * 2;
+        width: var(--size);
+        }
+
+        .top {
+        border-top-left-radius: var(--size) * 2;
+        border-top-right-radius: var(--size) * 2;
+        }
+
+        .right {
+        border-bottom-right-radius: var(--size) * 2;
+        border-top-right-radius: var(--size) * 2;
+        }
+
+        .bottom {
+        border-bottom-left-radius: var(--size) * 2;
+        border-bottom-right-radius: var(--size) * 2;
+        }
+
+        .left {
+        border-bottom-left-radius: var(--size) * 2;
+        border-top-left-radius: var(--size) * 2;
+        }
+
+        .container { 
+            font-size: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            
+                            height: max-content;
+                            width: max-content;
+
+            
+        }
+
+
+        .item{
+            width: 200px;
+            height: 200px;
+            background: #000000;
+            border-radius: 10px;
+            position: absolute;
+        }
+
+        .top-left{
+            left: 10px;
+            top: 10px;
+        }
+
+        .top-right{
+            top: 10px;
+            left: 371px;
+        }

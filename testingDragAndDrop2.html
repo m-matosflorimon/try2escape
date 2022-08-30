@@ -1,0 +1,419 @@
+<html>
+    <head>
+            
+            <!-- <style type="text/css">
+                body
+                {
+                    font-family: Arial;
+                    font-size: 10pt;
+                    
+                }
+                img
+                {
+                    height: 100px;
+                    width: 100px;
+                    margin: 2px;
+                }
+                .draggable
+                {
+                    filter: alpha(opacity=60);
+                    opacity: 0.6;
+                }
+                .dropped
+                {
+                    position: static !important;
+                }
+                #dvSource, #dvDest
+                {
+                    border: 5px solid #ccc;
+                    padding: 5px;
+                    min-height: 100px;
+                    width: 430px;
+                }
+
+            .jigsaw1 {
+            font-size: 12px; 
+            width: 6em;
+            height: 6em;
+            margin: 50px;
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            }
+
+            .jigsaw1,
+            .jigsaw1 span {
+            background-color: #0284cf; 
+            }
+
+            .jigsaw1 .t {
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: -1.5em;
+            left: 2em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            }
+
+            .jigsaw1 .r {
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 2em;
+            left: 5.5em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            }
+
+            .jigsaw1 .b { 
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: 4.5em;
+            left: 2.2em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            }
+
+            .jigsaw1 .l { 
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: 2.2em;
+            left: -.4em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+
+            }
+/*********************************************************************************************/
+
+            .botRight {
+            /*font-size: 12px; */
+            width: 6em;
+            height: 6em;
+            
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            
+            }
+
+            .botRight,
+            .botRight span {
+            background-color: #02cf35; 
+            position: relative;
+            }
+
+            .botRight .t {
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: -.5em;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            z-index: auto;
+            }
+
+            .botRight .l { 
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -8%;            
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            z-index: auto;
+            }
+
+            .botLeft {
+            /*font-size: 12px; */
+            width: 6em;
+            height: 6em;
+            
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            
+            }
+
+            .botLeft,
+            .botLeft span {
+            background-color: #cf02a3; 
+            position: relative;
+            }
+
+            .botLeft .t {
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: -.5em;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            z-index: auto;
+            }
+
+            .botLeft .r {
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5.5em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #cf02a3;
+            z-index: 1;
+            }
+
+          
+
+ 
+            .topLeft {
+            /*font-size: 12px; */
+            width: 6em;
+            height: 6em;
+            
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            
+            }
+
+            .topLeft,
+            .topLeft span {
+            background-color: #0284cf; 
+            position: relative;
+            }
+
+            .topLeft .r {
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 4.5em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            z-index: auto;
+            }
+
+            .topLeft .b { 
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #0284cf;
+            z-index: 1;
+            }
+
+
+
+            .topRight {
+            
+            width: 6em;
+            height: 6em;
+            
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            
+            }
+
+            .topRight,
+            .topRight span {
+            background-color: #cf0202; 
+            position: relative;
+            }
+
+
+            .topRight .b { 
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #cf0202;
+            z-index: 1;
+            }
+
+            .topRight .l { 
+            
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -25%;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #cf0202;
+            z-index: 1;
+            }
+
+            .container { 
+                font-size: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -o-transform: translate(-50%,-50%);
+                
+                                height: 12em;
+                                width: 12em;
+
+                
+            }
+
+                </style> -->
+        <link href="./testingDragAndDrop2.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+      <!--  <div id="dvSource">
+            
+            <hr />
+        <div id="dvDest">
+            Drop here
+        </div>-->
+        <div class ="container">
+        <div class="item top-left">  
+            
+        </div>
+        <!--<div class="bottom"></div>-->
+        <!--<div class="bottom"></div>-->
+        <!--<div class="item top-right">
+                <span class="b"></span>
+                <span class="l"></span>
+        </div>
+        
+        <div class="item bot-left">
+                <span class="t"></span>
+                <span class="r"></span>
+        </div>
+
+        <div class="item bot-right">
+                <span class="t"></span>
+                <span class="l"></span>
+        </div>-->
+    </div>
+<!--</div>-->
+        <!--<div class="jigsaw1">
+                <span class="t"></span>
+                <span class="r"></span>
+                <span class="b"></span>
+                <span class="l"></span>
+        </div>--> 
+<!--<div class ="container">
+        
+        <div class="topLeft">  
+                <span class="r"></span>
+                <span class="b"></span>
+        </div>
+
+        <div class="topRight">
+                <span class="b"></span>
+                <span class="l"></span>
+        </div>
+        
+        <div class="botLeft">
+                <span class="t"></span>
+                <span class="r"></span>
+        </div>
+
+        <div class="botRight">
+                <span class="t"></span>
+                <span class="l"></span>
+        </div>
+    </div>-->
+    <script>        
+        
+        
+        // document.addEventListener('DOMContentLoaded',()=>{
+        //     Array.from(document.querySelectorAll('.item')).forEach((item)=>{
+        //         item.onmousemove = (evt)=>{
+        //             console.log(evt)
+        //             item.style.left =  evt.pageX;
+        //             item.style.top =  evt.pageY;
+        //         }
+        //     })
+        // })
+    </script>
+    </body>
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.24/jquery-ui.min.js" type="text/javascript"></script>
+<link href="http://code.jquery.com/ui/1.8.24/themes/blitzer/jquery-ui.css" rel="stylesheet"
+type="text/css" />
+<script type="text/javascript">
+$(function () {
+    $("#dvSource div").draggable({
+        revert: "invalid",
+        refreshPositions: true,
+        drag: function (event, ui) {
+            ui.helper.addClass("draggable");
+        },
+        stop: function (event, ui) {
+            ui.helper.removeClass("draggable");
+            var image = this.src.split("/")[this.src.split("/").length - 1];
+            if ($.ui.ddmanager.drop(ui.helper.data("draggable"), event)) {
+                alert(image + " dropped.");
+            }
+            else {
+                alert(image + " not dropped.");
+            }
+        }
+    });
+    $("#dvDest").droppable({
+        drop: function (event, ui) {
+            if ($("#dvDest div").length == 0) {
+                $("#dvDest").html("");
+            }
+            ui.draggable.addClass("dropped");
+            $("#dvDest").append(ui.draggable);
+        }
+    });
+});
+</script> -->
+
+    </html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+      
+
+ 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+      body{
+        margin:0px;
+        padding:0px;
+        font-family: 'Roboto', sans-serif;
+        }
+        .box{
+        width:100%;
+        height: 100%;
+        background: url("./public/img/img/pub04.png");
+        position:absolute;
+        overflow:hidden;
+        flex-wrap: wrap;
+                display: flex;
+        /*cursor:crosshair;*/
+        }
+
+        .circle{
+        /* background:#f00; */
+        width:6em;
+        height:6em;
+        /* border-radius:50%; */
+        position:absolute;
+        z-index: 1;
+        transform:translate3d(-50%,-50%,0);
+        transition:transform 0.2s cubic-bezier(.02,1.23,.79,1.08);
+        }
+        
+        .topLeft{
+            background: blue;
+            transform: translate3d(200%,200%,0);
+        }
+
+        .topRight{
+            background: red;
+            transform: translate3d(300%,500%,0);
+        }
+
+        .botLeft{
+            background: green;
+            transform: translate3d(800%,50%,0);
+        }
+
+        .botRight{
+            background: yellow;
+            transform: translate3d(900%,500%,0);
+        }
+
+        p{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        }
+
+        i{
+        color:#f00;
+        }
+
+        .dropBox{
+            width: 12em;
+            height: 12em;
+            position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -o-transform: translate(-50%,-50%);
+                border-style: dashed;
+                border-width: 10px;
+                flex-wrap: wrap;
+                display: flex;
+                /* background: blue; */
+                margin: 0;
+                
+        }
+        .title-own{
+            /* width: 12em;
+            height: 12em; */
+            position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -o-transform: translate(-50%,-50%);
+                height: max-content;
+                visibility: hidden;
+                /* border-style: dashed;
+                border-width: 10px;
+                flex-wrap: wrap;
+                display: flex;
+                
+                margin: 0; */
+        }
+
+.two{
+    color: rgba(255, 173, 32, 1);
+}
+
+.email-input-area{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    /* position: absolute; */
+}
+
+.email-input{
+    width: 75%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  resize: vertical;
+  position: relative;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+.submit-btn{
+    background-color: rgba(255, 173, 32, 1);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+  cursor: pointer;
+  /* float: left; */
+  /* margin-top: 5px; */
+  width: 25%;
+  position: relative;
+  }
+
+  .form{
+      width: 100%;
+      display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gears {
+   width: 350px;
+   /* margin: 100px auto; */
+   display: block;
+   text-align: center;
+   font-weight: bold;
+   font-family: Arial;
+   color: #fff;
+   text-shadow: 1px 1px 2px #5F868A
+}
+
+.gears .big {
+   width: 80px;
+   height: 80px;
+   -webkit-transform-origin: center;
+   -moz-transform-origin: center;
+   -o-transform-origin: center;
+   transform-origin: center;
+   -webkit-animation: rotate 1.5s linear infinite;
+   -moz-animation: rotate 1.5s linear infinite;
+   -o-animation: rotate 1.5s linear infinite;
+   animation: rotate 1.5s linear infinite
+}
+
+.gears .small {
+   width: 50px;
+   height: 50px;
+   margin-left: -6px;
+   -webkit-transform-origin: center;
+   -moz-transform-origin: center;
+   -o-transform-origin: center;
+   transform-origin: center;
+   -webkit-animation: reverseRotate 1.5s linear infinite;
+   -moz-animation: reverseRotate 1.5s linear infinite;
+   -o-animation: reverseRotate 1.5s linear infinite;
+   animation: reverseRotate 1.5s linear infinite;
+}
+
+
+@-webkit-keyframes rotate {
+   0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+   }
+   100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+}
+
+
+@-moz-keyframes rotate {
+   0% {
+      -moz-transform: rotate(0);
+      transform: rotate(0);
+   }
+   100% {
+      -moz-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+}
+
+
+@-o-keyframes rotate {
+   0% {
+      -o-transform: rotate(0);
+      transform: rotate(0);
+   }
+   100% {
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+}
+
+
+@keyframes rotate {
+   0% {
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -o-transform: rotate(0);
+      transform: rotate(0);
+   }
+   100% {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+}
+
+@-webkit-keyframes reverseRotate {
+   0% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+   100% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+   }
+}
+
+@-moz-keyframes reverseRotate {
+   0% {
+      -moz-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+   100% {
+      -moz-transform: rotate(0);
+      transform: rotate(0);
+   }
+}
+
+@-o-keyframes reverseRotate {
+   0% {
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+   100% {
+      -o-transform: rotate(0);
+      transform: rotate(0);
+   }
+}
+
+@keyframes reverseRotate {
+   0% {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+   100% {
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -o-transform: rotate(0);
+      transform: rotate(0);
+   }
+}
+
+
+  </style>
+  <link href="./public/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+   
+        <div class="box">
+            <div id= "topLeft" class="circle topLeft" draggable="false"></div>
+            <div id= "topRight" class="circle topRight" draggable="false"></div>
+            <div id= "botLeft" class="circle botLeft" draggable="false"></div>
+            <div id= "botRight" class="circle botRight" draggable="false"></div>
+            <!-- <div id= "left" class="circle" draggable="false"></div> -->
+            <div id= "toDrop" class= "dropBox"></div>
+            
+            <div id="begin" class="title-01 title-01--11 text-center title-own">
+                    <h2 class="title__heading">
+                        <span>Somos</span>
+                        <br>
+                        <strong class="hero-section__words">
+                            <span class="title__effect is-visible">Try<span class="two">2</span>Escape</span>
+                        </strong>
+                    </h2>
+                    <div class="email-input-area">
+                            <form class="form">
+                                <input class="email-input" placeholder="Enter email">
+                                <button class="submit-btn">Notify me</button>
+                            </form>
+                        </div>
+                        <br>
+                    <div class="text-faded">Estamos en construcción. <br> Déjanos tu email y te mantendremos al tanto.</div>                    
+                        <br>
+                    <div class="gears">
+                            <img src="https://goo.gl/fpC7Oh" alt="gear" class="big">
+                           
+                            <img src="https://goo.gl/qL1pnV" alt="gear" class="small">
+                            
+                         </div>
+                </div> <!-- .title-01 -->
+                
+            
+            
+        </div>
+    
+</body>
+<script>
+
+    //Animation css middleware
+$.fn.extend({
+    animateCss: function(animationName, callback) {
+      var animationEnd = (function(el) {
+        var animations = {
+          animation: 'animationend',
+          OAnimation: 'oAnimationEnd',
+          MozAnimation: 'mozAnimationEnd',
+          WebkitAnimation: 'webkitAnimationEnd',
+        };
+  
+        for (var t in animations) {
+          if (el.style[t] !== undefined) {
+            return animations[t];
+          }
+        }
+      })(document.createElement('div'));
+  
+      this.addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName);
+  
+        if (typeof callback === 'function') callback();
+      });
+  
+      return this;
+    },
+  });
+
+    $(".circle").on("mousedown",function(e){
+        //console.log("Circle clicked");
+        //console.log(this.id);
+        
+        var id = "#" + this.id.toString();
+        if($(id).parent()[0].className === "dropBox"){
+            var x = e.clientX;
+            var y = e.clientY;
+            var newposX = x - ($(id).width()/2);
+            var newposY = y - ($(id).height()/2); 
+            $(id).parent().parent().prepend($(id).css({"position": "absolute","transform": "translate3d("+newposX+"px,"+newposY+"px,0px)"}));
+        }
+        //console.log(id);
+        console.log("toma");
+        $("#toDrop").animateCss("flash");
+        $(document).bind("click mousemove",".box",function(e){ 
+            var x = e.clientX;
+            var y = e.clientY;
+            var newposX = x - ($(id).width()/2);
+            var newposY = y - ($(id).height()/2); 
+            $(id).css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
+            // console.log($("#toDrop").position().left);
+            // if( $(id).position().left > $("#toDrop").position().left &&
+            //     $(id).position().left < $("#toDrop").position().left + $('#toDrop').width() &&
+            //     $(id).position().top > $("#toDrop").position().top &&
+            //     $(id).position().top < $("#toDrop").position().top + $('#toDrop').height()){
+                    
+
+            //         }
+
+            
+        });
+    });
+
+    $(".circle").on("mouseup",function(){
+        var id = "#" + this.id.toString();
+        $(document).unbind("click mousemove");
+        //console.log(this.x);
+        //console.log(this.y);
+        console.log("suelta");
+        if( $(id).position().left > $("#toDrop").position().left &&
+            $(id).position().left < $("#toDrop").position().left + $('#toDrop').width() &&
+            $(id).position().top > $("#toDrop").position().top &&
+            $(id).position().top < $("#toDrop").position().top + $('#toDrop').height()){
+
+                $("#toDrop").append($(id).css({"transform": "none","position": "relative"}));
+                if($("#toDrop").children().length == 4){
+                    console.log("ta lleno");
+                    if( $("#toDrop").children()[0].id === "topLeft" &&
+                        $("#toDrop").children()[1].id === "topRight" &&
+                        $("#toDrop").children()[2].id === "botLeft" &&
+                        $("#toDrop").children()[3].id === "botRight"){
+                            $("#toDrop").css({"position": "absolute","transform": "translate(-150%,-50%)"});
+                            $(".title-own").css("visibility","visible");
+                            $("#toDrop").children().each(function(i,v){
+                                // console.log(i);
+                                // console.log(v);
+                                var id = "#" + v.id;
+                                $(id).animateCss("fadeOut");
+                            });
+                            $("#toDrop").empty();
+                            $("#toDrop").css("height","max-content");
+                            $("#toDrop").css("width","max-content");
+                            
+                            $("#toDrop").append('<img src="./public/img/try2escape-logotype.bmp" alt="Smiley face" height="50%" width="50%">');
+                            
+
+                        }
+
+                    }
+                }
+        //console.log($("#toDrop"));
+        //console.log($("#toDrop").x);
+        //console.log($("#toDrop").y);
+        /*if(this.x > $("#toDrop").x){ 
+
+        }*/
+    });
+    /*$(document).on("click mousemove",".box",function(e){ 
+        var x = e.clientX;
+        var y = e.clientY;
+        var newposX = x - 60;
+        var newposY = y - 60; 
+        $(".circle").css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
+    });*/
+
+</script>
+</html>

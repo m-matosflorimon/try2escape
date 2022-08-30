@@ -1,0 +1,155 @@
+//reservations format
+[
+    {
+        "date": new Date(2018,10,30),
+        "mission": [
+            {
+                "missionId": ObjectId("5baf9d0f73a59cc5482d88f2"),
+                "time": [
+                    {
+                        "hour": "1:00pm",
+                        "status": true,
+                        "availability": 2,
+                        "subscribed": [
+                            {
+                                "reservStatus": "Reservado",
+                                "client": ObjectId("5baf7608daddf1d9003f39bb"),
+                                "timeRegistered": new Date(2018,09,27)
+                            }
+                        ]
+                    },
+                    {
+                        "hour": "2:00pm",
+                        "status": false,
+                        "availability": 2, 
+                        "subscribed": [
+                            {
+                                "reservStatus": "Reservado",
+                                "client": ObjectId("5baf7608daddf1d9003f39bb"),
+                                "timeRegistered": new Date(2018,09,27)
+                            }
+                        ]
+                    },
+                    {
+                        "hour": "3:00pm",
+                        "status": true,
+                        "availability": 2,
+                        "subscribed": [
+                            {
+                                "reservStatus": "Terminado",
+                                "client": ObjectId("5baf7608daddf1d9003f39bb"),
+                                "timeRegistered": new Date(2018,09,27)
+                            }
+                        ]
+                    }
+                ]
+            },
+
+            {
+                "missionId": ObjectId("5baf9d0f73a59cc5482d88f3"),
+                "time": [
+                    {
+                        "hour": "1:00pm",
+                        "status": true,
+                        "availability": 2,
+                        "subscribed": [
+                            {
+                                "reservStatus": "Reservado",
+                                "client": ObjectId("5baf7608daddf1d9003f39bb"),
+                                "timeRegistered": new Date(2018,09,27)
+                            }
+                        ]
+                    },
+                    {
+                        "hour": "2:00pm",
+                        "status": false,
+                        "availability": 2,
+                        "subscribed": [
+                            {
+                                "reservStatus": "Reservado",
+                                "client": ObjectId("5baf7608daddf1d9003f39bb"),
+                                "timeRegistered": new Date(2018,09,27)
+                            }
+                        ]
+                    },
+                    {
+                        "hour": "3:00pm",
+                        "status": true,
+                        "availability": 2,
+                        "subscribed": [
+                            {
+                                "reservStatus": "Terminado",
+                                "client": ObjectId("5baf7608daddf1d9003f39bb"),
+                                "timeRegistered": new Date(2018,09,27)
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "date": new Date(2018,10,20),
+        "mission": [
+            {
+                "missionId": ObjectId("5baf7608daddf1d9003f39bb"),
+                "time": [
+                    {
+                        "hour": "1:00pm",
+                        "status": true,
+                        "availability": 2,
+                        "subscribed": [
+                            
+                        ]
+                    },
+                    {
+                        "hour": "2:00pm",
+                        "status": false,
+                        "availability": 2,
+                        "subscribed": [
+                            {
+                                "client": ObjectId("5baf7608daddf1d9003f39bb"),
+                                "timeRegistered": new Date(2018,09,27)
+                            }
+                        ]
+                    },
+                    {
+                        "hour": "3:00pm",
+                        "status": true,
+                        "availability": 2,
+                        "subscribed": [
+                            {
+                                "client": ObjectId("5baf7608daddf1d9003f39bb"),
+                                "timeRegistered": new Date(2018,09,27)
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+//clients format
+[
+    {
+        "name": "Miguel Matos",
+        "phone": "829-442-8482",
+        "email": "m.matosflorimon",
+        "reservations": null
+    }
+]
+
+[
+    {
+        "name" : "Misión 1",
+        "description" : "Estas listo para la aventura?",
+        "creationDate" : new Date(2018,09,27),
+        "people": 13
+    },
+    {
+        "name" : "Misión 2",
+        "description" : "Aventura estas listo para?",
+        "creationDate" : new Date(2018,09,28),
+        "people": 12
+    }
+]

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+      
+
+ 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+      body{
+        margin:0px;
+        padding:0px;
+        font-family: 'Roboto', sans-serif;
+        }
+        .box{
+        width:100%;
+        height:500px;
+        background:#eaeaea;
+        position:relative;
+        overflow:hidden;
+        /*cursor:crosshair;*/
+        }
+
+        .puzzle{
+        background:#f00;
+        width:120px;
+        height:120px;
+        border-radius:50%;
+        position:absolute;
+        z-index: 1;
+        transform:translate3d(-50%,-50%,0);
+        transition:transform 0.2s cubic-bezier(.02,1.23,.79,1.08);
+        }
+
+        p{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        }
+
+        i{
+        color:#f00;
+        }
+
+        .dropBox{
+            width: 250px;
+            height: 250px;
+            position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -o-transform: translate(-50%,-50%);
+                border-style: dashed;
+                border-width: 10px;
+                background: blue;
+                
+        }
+
+         /* .botRight {
+
+            width: 6em;
+            height: 6em;
+            
+            position: absolute;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            
+            }
+
+            .botRight,
+            .botRight span {
+            background-color: #02cf35; 
+            position: relative;
+            }
+
+            .botRight .t {
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: -.5em;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            z-index: auto;
+            }
+
+            .botRight .l { 
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -8%;            
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            z-index: auto;
+            }
+
+            .botLeft {
+            
+            width: 6em;
+            height: 6em;
+            
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            
+            }
+
+            .botLeft,
+            .botLeft span {
+            background-color: #cf02a3; 
+            position: relative;
+            }
+
+            .botLeft .t {
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: -.5em;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            z-index: auto;
+            }
+
+            .botLeft .r {
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5.5em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #cf02a3;
+            z-index: 1;
+            }
+
+          
+
+ 
+            .topLeft {
+            
+            width: 6em;
+            height: 6em;
+            
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            
+            }
+
+            .topLeft,
+            .topLeft span {
+            background-color: #0284cf; 
+            position: relative;
+            }
+
+            .topLeft .r {
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 4.5em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #fff;
+            z-index: auto;
+            }
+
+            .topLeft .b { 
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #0284cf;
+            z-index: 1;
+            }
+
+            .topRight {
+            
+            width: 6em;
+            height: 6em;
+            
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            
+            }
+
+            .topRight,
+            .topRight span {
+            background-color: #cf0202; 
+            position: relative;
+            }
+
+
+            .topRight .b { 
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #cf0202;
+            z-index: 1;
+            }
+
+            .topRight .l { 
+            
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -25%;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #cf0202;
+            z-index: 1;
+            }
+
+            .container { 
+                font-size: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -o-transform: translate(-50%,-50%);
+                
+                                height: 12em;
+                                width: 12em;
+
+                
+            }
+ */
+
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+        <div class ="dropBox">
+        
+                <div id= "topLeft" class="topLeft puzzle">  
+                        <span class="r"></span>
+                        <span class="b"></span>
+                </div>
+        
+                <div id= "topRight" class="topRight puzzle">
+                        <span class="b"></span>
+                        <span class="l"></span>
+                </div>
+                
+                <div id= "botLeft" class="botLeft puzzle">
+                        <span class="t"></span>
+                        <span class="r"></span>
+                </div>
+        
+                <div id= "botRight" class="botRight puzzle ">
+                        <span class="t"></span>
+                        <span class="l"></span>
+                </div>
+            </div>
+            <!-- <div class="container" style= "border: 5px; border-style: dashed" ondragover ="allowDrop(event)" ondrop="drop(event)"> -->
+        
+            </div>
+        </div>
+        <!-- <div class="box">
+            <div id= "right" class="circle" draggable="false"></div> -->
+            <!-- <div id= "left" class="circle" draggable="false"></div> -->
+            <!-- <div id= "toDrop" class= "dropBox"></div>
+        </div> -->
+        
+              
+        
+
+
+</body>
+<script>
+
+    //Animation css middleware
+$.fn.extend({
+    animateCss: function(animationName, callback) {
+      var animationEnd = (function(el) {
+        var animations = {
+          animation: 'animationend',
+          OAnimation: 'oAnimationEnd',
+          MozAnimation: 'mozAnimationEnd',
+          WebkitAnimation: 'webkitAnimationEnd',
+        };
+  
+        for (var t in animations) {
+          if (el.style[t] !== undefined) {
+            return animations[t];
+          }
+        }
+      })(document.createElement('div'));
+  
+      this.addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName);
+  
+        if (typeof callback === 'function') callback();
+      });
+  
+      return this;
+    },
+  });
+
+    $(".puzzle").on("mousedown",function(){
+        //console.log("Circle clicked");
+        //console.log(this.id);
+        var id = "#" + this.id.toString();
+        
+        //console.log(id);
+        console.log("toma");
+
+        $(document).bind("click mousemove",".box",function(e){ 
+            var x = e.clientX;
+            var y = e.clientY;
+            var newposX = x - 60;
+            var newposY = y - 60; 
+            $(id).css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
+            // console.log($("#toDrop").position().left);
+            // if( $(id).position().left > $("#toDrop").position().left &&
+            //     $(id).position().left < $("#toDrop").position().left + $('#toDrop').width() &&
+            //     $(id).position().top > $("#toDrop").position().top &&
+            //     $(id).position().top < $("#toDrop").position().top + $('#toDrop').height()){
+            //         $("#toDrop").animateCss("flash");
+
+            //         }
+
+            
+        });
+    });
+
+    $(".puzzle").on("mouseup",function(){
+        $(document).unbind("click mousemove");
+        //console.log(this.x);
+        //console.log(this.y);
+        console.log("suelta");
+        // if( $(id).position().left > $("#toDrop").position().left &&
+        //         $(id).position().left < $("#toDrop").position().left + $('#toDrop').width() &&
+        //         $(id).position().top > $("#toDrop").position().top &&
+        //         $(id).position().top < $("#toDrop").position().top + $('#toDrop').height()){
+                    
+
+        //             }
+        //console.log($("#toDrop"));
+        //console.log($("#toDrop").x);
+        //console.log($("#toDrop").y);
+        /*if(this.x > $("#toDrop").x){ 
+
+        }*/
+    });
+    /*$(document).on("click mousemove",".box",function(e){ 
+        var x = e.clientX;
+        var y = e.clientY;
+        var newposX = x - 60;
+        var newposY = y - 60; 
+        $(".circle").css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
+    });*/
+
+</script>
+</html>
