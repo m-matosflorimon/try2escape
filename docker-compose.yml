@@ -1,0 +1,27 @@
+version: 2.15.1
+services:
+  frontend:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      # Only will build development stage from our dockerfile
+      # target: production
+    volumes:
+      - .:/usr/src/app
+
+    # Run a command against the development stage of the image
+    command: node app.js
+    ports:
+      - 8000:8000
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - 27017
+    environment:
+      MONGO_INITDB_DATABASE: Try2Escape
+    volumes:
+      - mongodb:/data/db
+volumes:
+  mongodb:
